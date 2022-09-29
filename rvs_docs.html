@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Change the description wrt project -->
+    <meta
+      name="description"
+      content="A Free and open-source documentation template built using html, tailwindcss and javascript."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- You can add your own fonts from fonts.google.com -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Default Script tags -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./public/js/index.js"></script>
+
+    <!-- Replace the title name -->
+    <title>Cleandocs-template</title>
+  </head>
+  <body style="font-family: 'Poppins', sans-serif">
+    <!-- Header start here -->
+    <header class="w-full p-3 border flex">
+      <nav
+        class="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:item-center md:item-center sm:item-center lg:justify-between md:justify-between sm:justify-between justify-start"
+      >
+        <ul>
+          <!-- You can change your logo name -->
+          <li class="font-mono text-xl">RVS Documentation</li>
+        </ul>
+        <ul id="header-nav" class="mr-6 sm:flex md:flex lg:flex hidden">
+          <li
+            class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0"
+          >
+            <a href="./index.html">Home</a>
+          </li>
+          <div>
+            <ul class="flex">
+              <!-- Change the href link to your respective social media accounts-->
+              <li class="mr-5">
+                <a href="https://github.com/PilliSiddharth/EDRI_APP"><img src="./public/svgs/github.svg" alt="GitHub Link" /></a>
+              </li>
+              <li class="mr-5">
+                <a href="https://mobile.twitter.com/inai_ai"><img src="./public/svgs/twitter.svg" alt="Twiiter Link" /></a>
+              </li>
+              <li class="mr-0">
+                <a href="https://www.youtube.com/channel/UCuM2ET3k9hwVNCyVEvGJdGQ"><img src="./public/svgs/youtube.svg" alt="YouTube Link" /></a>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </nav>
+
+      <div class="sm:hidden flex" onclick="OnclickOpenMenu()" id="open-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="hidden" onclick="OnclickCloseMenu()" id="close-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+    </header>
+    <!-- Header ends here -->
+
+    <div class="flex flex-col md:flex-row lg:flex-row">
+      <!-- Side menu starts here -->
+      <nav
+        class="flex ml-10 mt-7 md:fixed lg:fixed"
+        data-spy="affix"
+        data-offset-top="300"
+        data-offset-bottom="200"
+        role="navigation"
+      >
+        <ul class="nav">
+          <li class="font-medium"><a href="#link1">Getting Started</a></li>
+          <li class="font-medium">
+            <a href="#link2">Installation</a>
+            <ul class="nav">
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link2_1">Windows</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link2_2">Mac Os</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link2_3">Linux</a>
+              </li>
+            </ul>
+          </li>
+          <li class="font-medium"><a href="#link3">Configuration</a></li>
+          <li class="font-medium"><a href="#link4">Run the App</a></li>
+          <li class="font-medium"><a href="#link5">App - File Directory</a></li>
+          <li class="font-medium">
+            <a href="#link6">Usage & Features</a>
+            <ul class="nav">
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_1">Inspection</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_2">Building Description</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_3">Stuctural System</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_4">Stuctural Components</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_5">Occupancy</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_6">Life Threatening</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_7">Submitting</a>
+              </li>
+            </ul>
+          </li>
+          <!-- <li class="font-medium"><a href="#link6">Usage </a></li> -->
+        </ul>
+      </nav>
+      <!-- Side Menu ends here -->
+
+      <div class="pl-5 md:pl-[250px] lg:pl-[250px]">
+        <!-- Link1 start -->
+        <section id="link1">
+          <div class="h-full mt-10">
+            <p class="font-normal text-2xl">Getting Started</p>
+            <p class="leading-0 w-3/4">
+              The RVS Application has been created using Android Studio & Java. To run the application in your Android Studio follow the steps below.
+            </p>
+            <p class="text-sm pt-5 pb-4">To access the GitHub repository for the EDRI application, you'll be needing private access, request for permission by writing a mail to siddharth.pilli@inai.iiit.ac.in or bhaskar.kuntimalla@ihub-data.iiit.ac.in</p>
+          </div>
+        </section>
+        <!-- Link1 end -->
+
+        <!-- Link2 Start -->
+        <section id="link2">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Installation</p>
+            <p class="text-sm pb-4">Small Description</p>
+          </div>
+          <section id="link2_1" class="border-l-[2px]">
+            <div class="h-full mt-3 ml-5">
+              <p class="font-normal text-xl">Windows</p>
+              <p class="text-sm pb-4">Fork and clone the github repository.</p>
+              <script src="https://gist.github.com/PilliSiddharth/ae69b485f3a288549c982e961d128bee.js"></script>
+            </div>
+          </section>
+          <section id="link2_2" class="border-l-[2px]">
+            <div class="h-full mt-5 ml-5">
+              <p class="font-normal text-xl">Mac OS</p>
+              <p class="text-sm pb-4">Fork and clone the github repository.</p>
+              <script src="https://gist.github.com/PilliSiddharth/ae69b485f3a288549c982e961d128bee.js"></script>
+            </div>
+          </section>
+          <section id="link2_3" class="border-l-[2px]">
+            <div class="h-full mt-5 ml-5">
+              <p class="font-normal text-xl">Linux</p>
+              <p class="text-sm pb-4">Fork and clone the github repository.</p>
+              <script src="https://gist.github.com/PilliSiddharth/ae69b485f3a288549c982e961d128bee.js"></script>
+            </div>
+          </section>
+        </section>
+        <!-- Link2 Ends -->
+
+        <!-- Link3 start -->
+        <section id="link3">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Configuration</p>
+          </p>
+
+                                     
+          </p> 
+            <p class="leading-0 w-3/4">
+            Once you have cloned the repository you can open the project in Android Studio. Goto File > Open > Select The cloned Repository
+        
+          </div>
+        </section>
+        <!-- Link3 end -->
+
+        <!-- Link4 start -->
+        <section id="link4">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Run the App</p>
+            <p class="text-sm pt-2 pb-4">To run the Android Application, you can select your emulator either a real phone or an emulator and run the application.</p>
+            <section id="link2_3" class="border-l-[2px]">
+              <div class="h-full mt-5 ml-5">
+                <img src="run.JPG" alt="Run the Android Application">
+              </div>
+            </section>
+          </section>
+        
+          <section id="link5">
+            <div class="h-full mt-5">
+              <p class="font-normal text-2xl">App - File Directory</p>
+              <p class="text-sm pt-2 pb-4">The file directory of application consists of the root main folder, with two directories in it, example.myapplication9 and memorynotfound.pdf.itext. example.myapplication9 is the main directory in the app.</p>
+              <!-- <p class="text-sm pt-2 pb-4">               </p> -->
+              <p class="text-sm pt-2 pb-4">Inside example.myapplication9 there are 4 activities MainActivity, LoginActivity, RegistrationActivity, and HeaderFooterPageEvent</p>
+
+              <section id="link2_3" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <img src="files.JPG" alt="File Structure">
+                </div>
+              </section>
+            </section>
+            
+            <section id="link1029i">
+              <p class="text-sm pb-4">
+
+              </p>
+            </section>
+
+            <section id="link6">
+              <div class="h-full mt-5">
+                <p class="font-normal text-2xl">Usage & Features</p>
+                <p class="text-sm pb-4">We will explore the various usage and features of the application.</p>
+                <p class="text-sm pb-4">The entierty of the application is an survey, where based on the features you select it'll risk assess your structure and give a clear understanding on which features causes the structure livable and non-livable. The survey consists of 6 sections, which are Inspection, Building Description, Stuctural System, Stuctural Components, Occupancy, and Life Threatening Parameters.</p>
+
+              </div>
+              <section id="link3_1" class="border-l-[2px]">
+                <div class="h-full mt-3 ml-5">
+                  <p class="font-normal text-xl">Inspection</p>
+                  <p class="text-sm pb-4">The first section of the survey starts with Inspection. In the Inspection section it consists of various forms that is informative to understand who inspected the structure, date of inspection, time of inspection, and photos of the strucutre in various angles.</p>
+                  <img src="inspection.JPG">
+                </div>
+              </section>
+              <section id="link3_2" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <p class="font-normal text-xl">Building Description</p>
+                  <p class="text-sm pb-4">In Building Description user need to enter and specify information about the Building such as building name, address of the building, and etc.</p>
+                  <img src="bd.JPG">
+                </div>
+              </section>
+              <section id="link3_3" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <p class="font-normal text-xl">Stuctural System</p>
+                  <p class="text-sm pb-4">Structural system, in building construction, the particular method of assembling and constructing structural elements of a building so that they support and transmit applied loads safely to the ground without exceeding the allowable stresses in the members. In the Stuctural System section the user needs to choose if his structure belongs to any option below.</p>
+                  <img src="struc_system.JPG">
+                </div>
+              </section>
+              <section id="link3_4" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <p class="font-normal text-xl">Structural Components</p>
+                  <p class="text-sm pb-4">Structural components means the foundations, columns, girders, beams, supports, concrete slabs and other structural members of the Buildings, those portions of the exterior walls of the Buildings lying outside of a plane which is the interior face of the window glass of such walls and all Building Systems. In Structural Components there are 2 subsets which are FLOOR and ROOF.</p>
+                  <img src="struc_comp.JPG">
+                </div>
+              </section>
+              <section id="link3_5" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <p class="font-normal text-xl">Occupancy</p>
+                  <p class="text-sm pb-4">In Occupancy the user needs to select the Occupancy of the structure, for example Commercial, Education, Healthline and etc. There are two dropdowns here mainly because it's programmed in the concept of synchronous changing when a item in dropdown is selected, for example: If I were to select Healthline, the second dropdown updates to the subsets in Healthline such as Hospital, Fire station, Police station.</p>
+                  <img src="occupancy.JPG">
+                </div>
+              </section>
+              <section id="link3_6" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <p class="font-normal text-xl">Life Threatening - Parameters</p>
+                  <p class="text-sm pb-4">In Life threatening - parameters the user needs to check through multiple checkboxes to understand if there are any life threatening factors in the structure or at the structure.</p>
+                  <img src="ltp.JPG">
+                </div>
+              </section>
+              <section id="link3_7" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <p class="font-normal text-xl">Submitting Result - PDF</p>
+                  <p class="text-sm pb-4">Once everything's filled, all the input including Dropdowns, Text Input, Checkboxes, and etc-; we can click the submit button if we left anything out the app will ask us to fill that specific input 😉. But if we filled everything and click on submit the application will create a PDF file which contains the Risk assessment of the structure, below submit we have the "OPEN FILE" button when we click on it, it will take us to the PDF document. Below is the snapshot of how the PDF looks lile.</p>
+                  <img src="rvspdf.JPG">
+                </div>
+              </section>
+              <section id="link1029i">
+                <p class="text-sm pb-4">
+  
+                </p>
+
+
+
+
+                  <!-- </div> -->
+                </section>              
+              </section>
+
+          <!-- Font Family start -->
+        <!-- Link5 ends -->
+
+        <!-- Link6 starts -->
+        <section id="link9">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Issues</p>
+            <p class="text-sm pt-5 pb-4">
+              If you have any issue please raise a PR in github
+              <a
+                href="https://github.com/PilliSiddharth/RVS"
+                target="_blank"
+                class="bg-gray-300 rounded p-1 hover:text-pink-400"
+                >RVS</a
+              >
+            </p>
+          </div>
+        </section>
+        <!-- Link6 ends -->
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer starts here -->
+    <footer>
+      <div class="bg-black h-38 py-1 px-1 mt-5">
+        <div
+          tabindex="0"
+          aria-label="footer"
+          class="focus:outline-none mx-auto container flex flex-col items-center justify-center"
+        >
+          <div class="text-black flex flex-col md:items-center f-f-l pt-0">
+            <div class="my-6 text-base text-color f-f-l">
+              <ul class="md:flex items-center">
+                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  <a
+                    href="./index.html"
+                    class="text-white focus:outline-none focus:underline hover:text-gray-200"
+                    >Home
+                  </a>
+                </li>
+                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  <a
+                    href="./docs.html"
+                    class="text-white focus:outline-none focus:underline hover:text-gray-200"
+                    >Documentation
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="text-sm text-color mb-10 f-f-l">
+              <!-- Rename cleandocs with your respective name -->
+              <p tabindex="0" class="text-white focus:outline-none">
+                &copy; 2022 PilliSiddharth. All rights reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer ends here -->
+  </body>
+</html>

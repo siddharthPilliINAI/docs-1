@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Change the description wrt project -->
+    <meta
+      name="description"
+      content="A Free and open-source documentation template built using html, tailwindcss and javascript."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- You can add your own fonts from fonts.google.com -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Default Script tags -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./public/js/index.js"></script>
+
+    <!-- Replace the title name -->
+    <title>Cleandocs-template</title>
+  </head>
+  <body style="font-family: 'Poppins', sans-serif">
+    <!-- Header start here -->
+    <header class="w-full p-3 border flex">
+      <nav
+        class="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:item-center md:item-center sm:item-center lg:justify-between md:justify-between sm:justify-between justify-start"
+      >
+        <ul>
+          <!-- You can change your logo name -->
+          <li class="font-mono text-xl">EDRI Documentation</li>
+        </ul>
+        <ul id="header-nav" class="mr-6 sm:flex md:flex lg:flex hidden">
+          <li
+            class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0"
+          >
+            <a href="./index.html">Home</a>
+          </li>
+          <div>
+            <ul class="flex">
+              <!-- Change the href link to your respective social media accounts-->
+              <li class="mr-5">
+                <a href="https://github.com/PilliSiddharth/EDRI_APP"><img src="./public/svgs/github.svg" alt="GitHub Link" /></a>
+              </li>
+              <li class="mr-5">
+                <a href="https://mobile.twitter.com/inai_ai"><img src="./public/svgs/twitter.svg" alt="Twiiter Link" /></a>
+              </li>
+              <li class="mr-0">
+                <a href="https://www.youtube.com/channel/UCuM2ET3k9hwVNCyVEvGJdGQ"><img src="./public/svgs/youtube.svg" alt="YouTube Link" /></a>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </nav>
+
+      <div class="sm:hidden flex" onclick="OnclickOpenMenu()" id="open-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="hidden" onclick="OnclickCloseMenu()" id="close-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+    </header>
+    <!-- Header ends here -->
+
+    <div class="flex flex-col md:flex-row lg:flex-row">
+      <!-- Side menu starts here -->
+      <nav
+        class="flex ml-10 mt-7 md:fixed lg:fixed"
+        data-spy="affix"
+        data-offset-top="300"
+        data-offset-bottom="200"
+        role="navigation"
+      >
+        <ul class="nav">
+          <li class="font-medium"><a href="#link1">Getting Started</a></li>
+          <li class="font-medium">
+            <a href="#link2">Installation</a>
+            <ul class="nav">
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link2_1">Windows</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link2_2">Mac Os</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link2_3">Linux</a>
+              </li>
+            </ul>
+          </li>
+          <li class="font-medium"><a href="#link3">Configuration</a></li>
+          <li class="font-medium"><a href="#link4">Run the App</a></li>
+          <li class="font-medium"><a href="#link5">App - File Directory</a></li>
+          <li class="font-medium">
+            <a href="#link6">Usage & Features</a>
+            <ul class="nav">
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_1">Hazard</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_2">Ground Shaking</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_3">Exposure</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_4">Vulnerability</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_6">Submitting</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_7">Calculation</a>
+              </li>
+            </ul>
+          </li>
+          <!-- <li class="font-medium"><a href="#link6">Usage </a></li> -->
+        </ul>
+      </nav>
+      <!-- Side Menu ends here -->
+
+      <div class="pl-5 md:pl-[250px] lg:pl-[250px]">
+        <!-- Link1 start -->
+        <section id="link1">
+          <div class="h-full mt-10">
+            <p class="font-normal text-2xl">Getting Started</p>
+            <p class="leading-0 w-3/4">
+              The EDRI Application has been created using Android Studio & Java. To run the application in your Android Studio follow the steps below.
+            </p>
+            <p class="text-sm pt-5 pb-4">To access the GitHub repository for the EDRI application, you'll be needing private access, request for permission by writing a mail to siddharth.pilli@inai.iiit.ac.in or bhaskar.kuntimalla@ihub-data.iiit.ac.in</p>
+          </div>
+        </section>
+        <!-- Link1 end -->
+
+        <!-- Link2 Start -->
+        <section id="link2">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Installation</p>
+            <p class="text-sm pb-4">Small Description</p>
+          </div>
+          <section id="link2_1" class="border-l-[2px]">
+            <div class="h-full mt-3 ml-5">
+              <p class="font-normal text-xl">Windows</p>
+              <p class="text-sm pb-4">Fork and clone the github repository.</p>
+              <script src="https://gist.github.com/PilliSiddharth/baa80045ede06a58ad574ed1811aed12.js"></script>
+            </div>
+          </section>
+          <section id="link2_2" class="border-l-[2px]">
+            <div class="h-full mt-5 ml-5">
+              <p class="font-normal text-xl">Mac OS</p>
+              <p class="text-sm pb-4">Fork and clone the github repository.</p>
+              <script src="https://gist.github.com/PilliSiddharth/baa80045ede06a58ad574ed1811aed12.js"></script>
+            </div>
+          </section>
+          <section id="link2_3" class="border-l-[2px]">
+            <div class="h-full mt-5 ml-5">
+              <p class="font-normal text-xl">Linux</p>
+              <p class="text-sm pb-4">Fork and clone the github repository.</p>
+              <script src="https://gist.github.com/PilliSiddharth/baa80045ede06a58ad574ed1811aed12.js"></script>
+            </div>
+          </section>
+        </section>
+        <!-- Link2 Ends -->
+
+        <!-- Link3 start -->
+        <section id="link3">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Configuration</p>
+          </p>
+
+                                     
+          </p> 
+            <p class="leading-0 w-3/4">
+            Once you have cloned the repository you can open the project in Android Studio. Goto File > Open > Select The cloned Repository
+        
+          </div>
+        </section>
+        <!-- Link3 end -->
+
+        <!-- Link4 start -->
+        <section id="link4">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Run the App</p>
+            <p class="text-sm pt-2 pb-4">To run the Android Application, you can select your emulator either a real phone or an emulator and run the application.</p>
+            <section id="link2_3" class="border-l-[2px]">
+              <div class="h-full mt-5 ml-5">
+                <img src="run.JPG" alt="Run the Android Application">
+              </div>
+            </section>
+          </section>
+        
+          <section id="link5">
+            <div class="h-full mt-5">
+              <p class="font-normal text-2xl">App - File Directory</p>
+              <p class="text-sm pt-2 pb-4">The file directory of application consists of the root main folder, with two directories in it, example.myapplication9 and memorynotfound.pdf.itext. example.myapplication9 is the main directory in the app.</p>
+              <!-- <p class="text-sm pt-2 pb-4">               </p> -->
+              <p class="text-sm pt-2 pb-4">Inside example.myapplication9 there are 4 activities MainActivity, LoginActivity, RegistrationActivity, and HeaderFooterPageEvent</p>
+
+              <section id="link2_3" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <img src="files.JPG" alt="File Structure">
+                </div>
+              </section>
+            </section>
+            
+            <section id="link1029i">
+              <p class="text-sm pb-4">
+
+              </p>
+            </section>
+
+            <section id="link6">
+              <div class="h-full mt-5">
+                <p class="font-normal text-2xl">Usage & Features</p>
+                <p class="text-sm pb-4">We will not explore the various usage and features of the application.</p>
+                <p class="text-sm pb-4">The entierty of the application is an complete form, where based on the features you select it evaluates a risk value for your structure. The evaluation has been divided into 4 subsets Hazard, Ground Shaking, Exposure, and Vulnerability.</p>
+
+              </div>
+              <section id="link3_1" class="border-l-[2px]">
+                <div class="h-full mt-3 ml-5">
+                  <p class="font-normal text-xl">Hazard</p>
+                  <p class="text-sm pb-4">The first section of the form starts with Hazard. In the Hazard section it consists of single dropdown called Collateral Damage, this dropdown has 4 options which are Liquefaction, Rockfall, Landslide, and Fire. This dropdown is useful for understanding if there is any sort Collateral Damage near or at the structure.</p>
+                  <img src="hazard.JPG">
+                </div>
+              </section>
+              <section id="link3_2" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <p class="font-normal text-xl">Ground Shaking</p>
+                  <p class="text-sm pb-4">In Ground Shaking the user needs to provide various information about the structure for further evaluation. Few of those inputs are Zone factor(Zone factors are given on the basis of expected intensity of the earthquake in different zones.), Soil Type(The type of soil at the structure), Storeys of the structure(Number of Storeys in the Structure), and finally photos of the structure at various angles. This data is going to be calculated on a scale with each selection resulting in a increase ir a decrease in Vulnerability.</p>
+                  <img src="ground_shake.JPG">
+                </div>
+              </section>
+              <section id="link3_3" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <p class="font-normal text-xl">Exposure</p>
+                  <p class="text-sm pb-4">In Exposure user needs to provide information the Type of Structure, and The Floor Space Index(FSI) or Floor Area Ration(FAR). There is a catch with the whole concept of FSI because few regions have sort of an FSI dilemma 🤔. Basically the FSI in Hyderabad is 1 but somewhere like Bangalore FSI is 1.75. So keeping this is mind there is FSI and FSI Allowable, based on the allowable value the actual can be nomralized.</p>
+                  <img src="exposure.JPG">
+                </div>
+              </section>
+              <section id="link3_4" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <p class="font-normal text-xl">Vulnerability - Economic Loss Inducing Factors</p>
+                  <p class="text-sm pb-4">Earthquake vulnerability of a building is the amount of expected damage induced to it by the
+                    expected intensity of earthquake shaking. It can be quantified in terms of Life Threatening Factors
+                    (LTF) and Economic Loss Inducing Factors (ELIF).</p>
+                  <p class="text-sm pb-4">The ELIF calculation  uses every input as a checkbox, and each checkbox contains a certian value and entirety of ELIF can be quantified as the algebraic sum of: (i) siting issues (5%), (ii) soil & foundation conditions (5%), (iii) architecture features (50%), (iv) structural aspects (20%), and (v) construction details (20%). The above percentage varies with building type, and over time upon gaining experience of risk assessment. </p>
+                  <img src="elif.JPG">
+                </div>
+              </section>
+              <section id="link3_5" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <p class="font-normal text-xl">Vulnerability - Life Threatening Factors </p>
+                  <p class="text-sm pb-4">Two types of lifethreatening factors are considered, namely (i) those related to the structure of the house, and (ii)
+                    those related to the contents and utilities of the house; hereinafter, these two sets of factors are
+                    referred to as Life Threatening House Structure Factors L(S) and Life Threatening House Contents
+                    & Utilities Factors L(C). Life threatening factors can be quantified in terms of: (i) site, (ii) form, and
+                    (iii) strength. If any of these factors are present in the buildings, then that building is declared as
+                    one with as 100% risk.</p>
+                  <img src="life.JPG">
+                </div>
+              </section>
+              <section id="link3_6" class="border-l-[2px]">
+                <div class="h-full mt-5 ml-5">
+                  <p class="font-normal text-xl">Submitting Result - PDF</p>
+                  <p class="text-sm pb-4">Once everything's filled, all the input including Dropdowns, Text Input, Checkboxes, and etc-; we can click the submit button if we left anything out the app will ask us to fill that specific input 😉. But if we filled everything and click on submit the application will create a PDF file which contains the EDRI value of the structure, below submit we have the "OPEN FILE" button when we click on it, it will take us to the PDF document. Below is the snapshot of how the PDF looks lile.</p>
+                  <img src="pdf.JPG">
+                </div>
+              </section>
+              <section id="link1029i">
+                <p class="text-sm pb-4">
+  
+                </p>
+                <section id="link3_7" class="border-l-[2px]">
+                  <div class="h-full mt-5 ml-5">
+                    <p class="font-normal text-xl">Understanding - EDRI Calculation</p>
+                    <p class="text-sm pb-4">The calculation of EDRI looks a bit complicated but in reality the algorithm is neat and understandable, it's basically pthe product of Hazard, Exposure, and Vulnerability. The below diagram might help you Understand the Algoritm better.</p>
+                    <!-- <img src="hazard_maths.JPG">
+                    <img src="exposure_maths.JPG">
+                    <img src="vauln_maths.JPG"> -->
+                    <img src="complete.JPG">
+
+
+
+                  </div>
+                </section>              
+              </section>
+
+          <!-- Font Family start -->
+        <!-- Link5 ends -->
+
+        <!-- Link6 starts -->
+        <section id="link9">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Issues</p>
+            <p class="text-sm pt-5 pb-4">
+              If you have any issue please raise a PR in github
+              <a
+                href="https://github.com/PilliSiddharth/EDRI_APP"
+                target="_blank"
+                class="bg-gray-300 rounded p-1 hover:text-pink-400"
+                >EDRI_APP</a
+              >
+            </p>
+          </div>
+        </section>
+        <!-- Link6 ends -->
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer starts here -->
+    <footer>
+      <div class="bg-black h-38 py-1 px-1 mt-5">
+        <div
+          tabindex="0"
+          aria-label="footer"
+          class="focus:outline-none mx-auto container flex flex-col items-center justify-center"
+        >
+          <div class="text-black flex flex-col md:items-center f-f-l pt-0">
+            <div class="my-6 text-base text-color f-f-l">
+              <ul class="md:flex items-center">
+                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  <a
+                    href="./index.html"
+                    class="text-white focus:outline-none focus:underline hover:text-gray-200"
+                    >Home
+                  </a>
+                </li>
+                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  <a
+                    href="./docs.html"
+                    class="text-white focus:outline-none focus:underline hover:text-gray-200"
+                    >Documentation
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="text-sm text-color mb-10 f-f-l">
+              <!-- Rename cleandocs with your respective name -->
+              <p tabindex="0" class="text-white focus:outline-none">
+                &copy; 2022 PilliSiddharth. All rights reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer ends here -->
+  </body>
+</html>

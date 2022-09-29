@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Change the description wrt project -->
+    <meta
+      name="description"
+      content="A Free and open-source documentation template built using html, tailwindcss and javascript."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- You can add your own fonts from fonts.google.com -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Default Script tags -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./public/js/index.js"></script>
+
+    <!-- Replace the title name -->
+    <title>Cleandocs-template</title>
+  </head>
+  <body style="font-family: 'Poppins', sans-serif">
+    <!-- Header start here -->
+    <header class="w-full p-3 border flex">
+      <nav
+        class="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:item-center md:item-center sm:item-center lg:justify-between md:justify-between sm:justify-between justify-start"
+      >
+        <ul>
+          <!-- You can change your logo name -->
+          <li class="font-mono text-xl">Building Classification</li>
+        </ul>
+        <ul id="header-nav" class="mr-6 sm:flex md:flex lg:flex hidden">
+          <li
+            class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0"
+          >
+            <a href="./index.html">Home</a>
+          </li>
+          <div>
+            <ul class="flex">
+              <!-- Change the href link to your respective social media accounts-->
+              <li class="mr-5">
+                <a href="https://github.com/PilliSiddharth/EDRI_APP"><img src="./public/svgs/github.svg" alt="GitHub Link" /></a>
+              </li>
+              <li class="mr-5">
+                <a href="https://mobile.twitter.com/inai_ai"><img src="./public/svgs/twitter.svg" alt="Twiiter Link" /></a>
+              </li>
+              <li class="mr-0">
+                <a href="https://www.youtube.com/channel/UCuM2ET3k9hwVNCyVEvGJdGQ"><img src="./public/svgs/youtube.svg" alt="YouTube Link" /></a>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </nav>
+
+      <div class="sm:hidden flex" onclick="OnclickOpenMenu()" id="open-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="hidden" onclick="OnclickCloseMenu()" id="close-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+    </header>
+    <!-- Header ends here -->
+
+    <div class="flex flex-col md:flex-row lg:flex-row">
+      <!-- Side menu starts here -->
+      <nav
+        class="flex ml-10 mt-7 md:fixed lg:fixed"
+        data-spy="affix"
+        data-offset-top="300"
+        data-offset-bottom="200"
+        role="navigation"
+      >
+        <ul class="nav">
+          <li class="font-medium"><a href="#link1">Getting Started</a></li>
+          <!-- <li class="font-medium">
+            <a href="#link2">Installation</a>
+            <ul class="nav">
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link2_1">Windows</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link2_2">Mac Os</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link2_3">Linux</a>
+              </li> -->
+            <!-- </ul> -->
+          <!-- </li> -->
+          <li class="font-medium"><a href="#link3">Problem Case</a></li>
+          <li class="font-medium"><a href="#link4">Exploring Data</a></li>
+          <li class="font-medium"><a href="#link5">Building the Modle</a></li>
+          <li class="font-medium">
+            <a href="#link6">Training the Modle</a>
+            <!-- <ul class="nav">
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_1">Hazard</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_2">Ground Shaking</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_3">Exposure</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_4">Vulnerability</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_6">Submitting</a>
+              </li>
+              <li class="text-[#111] pl-[20px] font-[400] border-l-[2px]">
+                <a href="#link3_7">Calculation</a>
+              </li> -->
+            <!-- </ul> -->
+          <!-- </li> -->
+          <!-- <li class="font-medium"><a href="#link6">Usage </a></li> -->
+        </ul>
+      </nav>
+      <!-- Side Menu ends here -->
+
+      <div class="pl-5 md:pl-[250px] lg:pl-[250px]">
+        <!-- Link1 start -->
+        <section id="link1">
+          <div class="h-full mt-10">
+            <p class="font-normal text-2xl">Getting Started</p>
+            <section>
+                <p>
+                    ‎ 
+                </p>
+            </section>
+            <p>
+
+            </p>
+            <p>
+
+            </p>
+            <p class="leading-0 w-3/4">
+                We are creating a binary Classification model that takes structure inside an image as its input and classifies if the structure in the image is either a Reinforce Concrete or Brick Masonry Building. At the moment the model is still in progress mainly becuase we are not reaching an accuracy we are satisified, this is mainly because to classify between two objects there needs to be visual paramters that can make a differentation and find a pattern between them, for training a Deep Learning network we also need huge amounts of image samples of both classes, and finally the data should have the right ROI of the object we are trying to classify. Most of these features have not satisified our needs to build a model with better accuracy.    
+            </p>
+            <p class="text-sm pt-5 pb-4">To access either the model or the data for the EDRI application, you'll be needing private access, request for permission by writing a mail to siddharth.pilli@inai.iiit.ac.in or bhaskar.kuntimalla@ihub-data.iiit.ac.in</p>
+          </div>
+        </section>
+        <!-- Link1 end -->
+
+        <!-- Link2 Start -->
+        <!-- <section id="link2">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Installation</p>
+            <p class="text-sm pb-4">Small Description</p>
+          </div>
+          <section id="link2_1" class="border-l-[2px]">
+            <div class="h-full mt-3 ml-5">
+              <p class="font-normal text-xl">Windows</p>
+              <p class="text-sm pb-4">Fork and clone the github repository.</p>
+              <script src="https://gist.github.com/PilliSiddharth/baa80045ede06a58ad574ed1811aed12.js"></script>
+            </div>
+          </section>
+          <section id="link2_2" class="border-l-[2px]">
+            <div class="h-full mt-5 ml-5">
+              <p class="font-normal text-xl">Mac OS</p>
+              <p class="text-sm pb-4">Fork and clone the github repository.</p>
+              <script src="https://gist.github.com/PilliSiddharth/baa80045ede06a58ad574ed1811aed12.js"></script>
+            </div>
+          </section>
+          <section id="link2_3" class="border-l-[2px]">
+            <div class="h-full mt-5 ml-5">
+              <p class="font-normal text-xl">Linux</p>
+              <p class="text-sm pb-4">Fork and clone the github repository.</p>
+              <script src="https://gist.github.com/PilliSiddharth/baa80045ede06a58ad574ed1811aed12.js"></script>
+            </div>
+          </section>
+        </section> -->
+        <!-- Link2 Ends -->
+
+        <!-- Link3 start -->
+        <section id="link3">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Problem Case - Statement</p>
+          </p>
+          ‎ 
+
+                                     
+          </p> 
+            <p class="leading-0 w-3/4">
+                This application is going to be used by Civil Inspectors for travelling to the site to completely assess the risk of the structure to an Earthquake (pre or post). So if a Civil Inspector were to travel to a structure and start examining it, he first needs to understand if the structure is Reinforced Concrete or Brick Masonry. We are trying to build a feature where after capturing an image we can determine if the building is either Reinforced Concrete or Brick Masonry.</p>
+                <img src="classification_diagram.png">
+          </div>
+        </section>
+        <!-- Link3 end -->
+
+        <!-- Link4 start -->
+        <section id="link4">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Exploring Data</p>
+            <p class="text-sm pt-2 pb-4">This is a binary classification problem, so we have to claissfy if the strucutre either belongs to one of two classes, so in hand we have two datasets one for Reinforced Concrete and the other for Brick Masonry, let's explore these datasets.</p>
+            <p class="text-sm pt-2 pb-4">Reinforced concrete, concrete in which steel is embedded in such a manner that the two materials act together in resisting forces. The reinforcing steel rods, bars, or mesh absorbs the tensile, shear, and sometimes the compressive stresses in a concrete structure. Plain concrete does not easily withstand tensile and shear stresses caused by wind, earthquakes, vibrations, and other forces and is therefore unsuitable in most structural applications. In reinforced concrete, the tensile strength of steel and the compressive strength of concrete work together to allow the member to sustain these stresses over considerable spans. Most of the apartments, houses, malls, and various structures tend to use Reinforced Concrete.</p>
+            <p class="text-sm pt-2 pb-4"> Brick masonry is a highly durable form of construction. It is built by placing bricks in mortar in a systematic manner to construct solid mass that withstand exerted loads. There are several types of bricks and number of mortars which  can be used to construct brick masonry. The bond in brick masonry, which adheres bricks together, is produced by filling joints between bricks with suitable mortar. Special cautions shall be practiced while mortar is mixed and placed since it greatly affect the performance and durability of masonry structure. Most of the Brick Masonry structures can be found in villages but are a bit rare in cities.</p>
+            <p class="text-sm pt-2 pb-4">Here are few images of both Reinforced Concrete and Brick Masonry: </p>
+            <img src="set_images.JPG" >
+            <section id="link2_3" class="border-l-[2px]">
+              <div class="h-full mt-5 ml-5">
+              </div>
+            </section>
+          </section>
+        
+          <section id="link5">
+            <div class="h-full mt-5">
+              <p class="font-normal text-2xl">Building the Model</p>
+              <p class="text-sm pt-2 pb-4">We can now build the classification model, to build the model I have used an Inception V3. Below are the frameworks, hyperparameters, and split size used for building the model.</p>
+              <!-- <p class="text-sm pt-2 pb-4">               </p> -->
+              <img src="reqs.JPG">
+              <img src="hyper.JPG">
+              <img src="size.JPG">
+              <p></p>
+            </section>
+            
+            <section id="link1029i">
+              <p class="text-sm pb-4">
+
+              </p>
+            </section>
+
+            <section id="link6">
+              <div class="h-full mt-5">
+                <p class="font-normal text-2xl">Training the Model</p>
+                <p>          ‎ 
+                </p>
+                <p class="text-sm pb-4">The model has been already trained, and the performance of the model doesn't make it ready for deployment. because with many data limitations we have undertstood that the model has been underfitted. So to solve for this problem we have tried with augmentations using KerasImageDataGenerator (seeing if it might help), but no luck. The concept of classifing building based on an image is a complicated task for humans itself. Because most of the building does not follow the right guidelines for building either Reinforced Concrete or Brick Masonry which makes it quite difficult to find a pattern for structures of Brick Masonry and Reinforced Concrete.</p>
+                <a class="bg-gray-300  p-1 hover:text-pink-400" href="model_training.html">If you want to understand the model, or train the model yourself you can check out the notebook here</a></p>
+
+
+          <!-- Font Family start -->
+        <!-- Link5 ends -->
+
+        <!-- Link6 starts -->
+        <section id="link9">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Issues</p>
+            <p class="text-sm pt-5 pb-4">
+              If you have any issue please raise a PR in github
+              <a
+                href="https://github.com/PilliSiddharth/EDRI_APP"
+                target="_blank"
+                class="bg-gray-300 rounded p-1 hover:text-pink-400"
+                >EDRI_APP</a
+              >
+            </p>
+          </div>
+        </section>
+        <!-- Link6 ends -->
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer starts here -->
+    <footer>
+      <div class="bg-black h-38 py-1 px-1 mt-5">
+        <div
+          tabindex="0"
+          aria-label="footer"
+          class="focus:outline-none mx-auto container flex flex-col items-center justify-center"
+        >
+          <div class="text-black flex flex-col md:items-center f-f-l pt-0">
+            <div class="my-6 text-base text-color f-f-l">
+              <ul class="md:flex items-center">
+                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  <a
+                    href="./index.html"
+                    class="text-white focus:outline-none focus:underline hover:text-gray-200"
+                    >Home
+                  </a>
+                </li>
+                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  <a
+                    href="./docs.html"
+                    class="text-white focus:outline-none focus:underline hover:text-gray-200"
+                    >Documentation
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="text-sm text-color mb-10 f-f-l">
+              <!-- Rename cleandocs with your respective name -->
+              <p tabindex="0" class="text-white focus:outline-none">
+                &copy; 2022 PilliSiddharth. All rights reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer ends here -->
+  </body>
+</html>
